@@ -1,5 +1,6 @@
 #include <SDL.h>
 #include <cstring>
+#include <iostream>
 #ifndef SCREEN_H_
 #define SCREEN_H_
 #pragma once
@@ -21,6 +22,8 @@ public:
 	bool init();
 	bool processEvents();
 	void close();
+	void update();
+	void setPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue);
 
 };
 
