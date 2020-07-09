@@ -1,8 +1,2 @@
-﻿  main.cpp
-C:\Workspace\SDL Basic\SDL Basic\main.cpp(13,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Workspace\SDL Basic\SDL Basic\main.cpp(34,23): warning C4244: 'initializing': conversion from 'double' to 'unsigned char', possible loss of data
-C:\Workspace\SDL Basic\SDL Basic\main.cpp(35,21): warning C4244: 'initializing': conversion from 'double' to 'unsigned char', possible loss of data
-C:\Workspace\SDL Basic\SDL Basic\main.cpp(36,22): warning C4244: 'initializing': conversion from 'double' to 'unsigned char', possible loss of data
-C:\Workspace\SDL Basic\SDL Basic\main.cpp(44,10): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Workspace\SDL Basic\SDL Basic\main.cpp(45,10): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+﻿  Particle.cpp
   SDL Basic.vcxproj -> C:\Workspace\SDL Basic\Debug\SDL Basic.exe
