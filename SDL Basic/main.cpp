@@ -14,29 +14,25 @@ int main()
 
 	Screen screen;
 
-	Swarm swarm;
-
 	//Error checking
 	if (screen.init() == false) 
 	{
 		std::cout << "Error initialising SDL!" << std::endl;
 	}
 
+	Swarm swarm;
+
 	//Event loop
 	while (true)
 	{
-		//Update particals
-		
-		//Draw particals
 		int elapsed = SDL_GetTicks();
 
-		screen.clear();
 		swarm.update(elapsed);
 
 		//Randomize values of RGB
-		unsigned char green = (1 + sin(elapsed * 0.001)) * 128;
-		unsigned char red = (1 + sin(elapsed * 0.002)) * 128;
-		unsigned char blue = (1 + sin(elapsed * 0.003)) * 128;
+		unsigned char green = (unsigned char)((1 + sin(elapsed * 0.0001)) * 128);
+		unsigned char red = (unsigned char)((1 + sin(elapsed * 0.0002)) * 128);
+		unsigned char blue = (unsigned char)((1 + sin(elapsed * 0.0003)) * 128);
 
 		//Pointer to array of random particles
 		const Particle* const pParticles = swarm.getParticles();
@@ -51,6 +47,9 @@ int main()
 
 			screen.setPixel(x, y, red, green, blue);
 		}
+
+		//Blur particles
+		screen.boxBlur();
 
 		//Draw the screen
 		screen.update();
